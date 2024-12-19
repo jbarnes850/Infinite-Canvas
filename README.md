@@ -2,6 +2,8 @@
 
 Your Private AI Creative Assistant - A powerful tool for generating and managing creative assets with AI.
 
+![Screenshot 2024-12-18 at 10 16 48 PM](https://github.com/user-attachments/assets/9e1e8c8f-c070-4d8d-9aa5-069d3de07c25)
+
 ## Features
 
 - 🎨 **AI-Powered Design Generation**: Create variations of your designs using advanced AI models
