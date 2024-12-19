@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  
+  /* Updated brand colors */
+  --primary: 250 95% 65%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  
+  /* Refined neutral tones */
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  
+  /* System colors */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 250 95% 65%;
+  
+  /* Chart colors */
+  --chart-1: 250 95% 65%;
+  --chart-2: 280 90% 70%;
+  --chart-3: 220 85% 65%;
+  --chart-4: 190 95% 60%;
+  --chart-5: 160 90% 65%;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  
+  /* Dark mode brand colors */
+  --primary: 250 95% 75%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Dark mode neutral tones */
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  
+  /* Dark mode system colors */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 250 95% 75%;
+  
+  /* Dark mode chart colors */
+  --chart-1: 250 95% 75%;
+  --chart-2: 280 90% 80%;
+  --chart-3: 220 85% 75%;
+  --chart-4: 190 95% 70%;
+  --chart-5: 160 90% 75%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground transition-all duration-300;
+  }
+  
+  /* Brand pattern */
+  .brand-pattern {
+    background-image: radial-gradient(
+      circle at 2px 2px,
+      hsl(var(--primary)/0.05) 1px,
+      transparent 0
+    );
+    background-size: 24px 24px;
+  }
+  
+  /* Glassmorphism */
+  .glass {
+    @apply bg-background/80 backdrop-blur-lg border shadow-lg;
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-0.5;
+  }
+}
